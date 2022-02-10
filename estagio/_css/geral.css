@@ -1,0 +1,27 @@
+@charset "UTF-8";
+body#tudo {
+	background-color: lightgrey;
+}
+div#interface {
+	width: 900px;
+	background-color: white;
+	margin: -20px auto 10px auto;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+	padding: 20px;
+	border-radius: 5px 5px 5px 5px;
+}
+table#tabela, table#tabela th {
+	text-align: center;
+}
+input#proximo {
+	/*float: right;*/
+}
+hr {
+	display: block;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-left: auto;
+	margin-right: auto;
+	border-style: inset;
+	border-width: 1px;
+}
