@@ -41,11 +41,6 @@
 				document.getElementById("opcao_".concat(campos.id_aluno)).selected = "selected";
 				document.getElementById("opcao_".concat(campos.id_status)).selected = "selected";
 			}
-			/*$(document).ready(function() {
-				selectViaAjax("#selempresaest", "empresa_estagio", "titulo", "id_empresa_estagio");
-				selectViaAjax("#selaluno", "aluno", "nome", "id_aluno");
-				selectViaAjax("#selstatus", "estatus", "descricao", "id_status");
-			});*/
 		</script>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -86,13 +81,10 @@
 					<label>Previsão de Ano de Término:</label>
 					<input id="anoTermino" class="form-control" type="number" name="anoTAEE">
 					<label>Empresa Estagio:</label>
-					<!-- <select class='js-example-basic-multiple form-control' name='selempresaest' id='selempresaest' size ='1'></select> -->
 					<?php $metodos->criaLista("empresa_estagio", "titulo", "id_empresa_estagio"); ?>
 					<label>Aluno:</label>
-					<!-- <select class='js-example-basic-multiple form-control' name='selaluno' id='selaluno' size ='1'></select> -->
 					<?php $metodos->criaLista("aluno", "nome", "id_aluno"); ?>
 					<label>Estatus:</label>
-					<!-- <select class='js-example-basic-multiple form-control' name='selstatus' id='selstatus' size ='1'></select> -->
 					<?php $metodos->criaLista("estatus", "descricao", "id_status"); ?>
 					<br>
 					<br/>
@@ -166,7 +158,6 @@
 						$base = $pag * 10;
 						$alunoPesq = "SELECT * FROM aluno WHERE nome = '$pesquisa'";
 						$resultado_alunoPesq = mysqli_query($conn, $alunoPesq);
-						//$aluno = mysqli_fetch($resultado_alunoPesq);
 						while ($aluno=mysqli_fetch_array($resultado_alunoPesq)) {
 						//busca os dados da table aluno_empresa_status
 							$result_curso = "SELECT * FROM aluno_empresa_status WHERE id_aluno LIKE '$aluno[0]' ORDER BY id_aluno LIMIT $base, 10";
